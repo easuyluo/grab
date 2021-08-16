@@ -18,7 +18,7 @@ import com.dyf.grab.test.test;
 
 public class GetProBaseInfoService {
 
-	private static final Logger logger = LoggerFactory.getLogger(test.class);
+	private static final Logger logger = LoggerFactory.getLogger(GetProBaseInfoService.class);
 
 	static String searchUrl = "https://s.taobao.com/search?spm=a21bo.21814703.201867-links-0.1.5b8b11d931gM0G&q=%E5%B0%8F%E9%BB%91%E8%A3%99";
 	static String searchUrlOld = "https://s.taobao.com/search?q=%E9%A5%BC%E5%B9%B2&imgfile=&commend=all&ssid=s5-e&search_type=item&sourceId=tb.index&spm=a21bo.2017.201856-taobao-item.1&ie=utf8&initiative_id=tbindexz_20170306";
@@ -36,48 +36,8 @@ public class GetProBaseInfoService {
 			connection.setRequestProperty("connection", "Keep-Alive");
 			connection.setRequestProperty("Referer",searchUrl);
 			connection.setRequestProperty("user-agent",
-					"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0");
-			connection.setRequestProperty("Cookie", "_cc_=U%2BGCWk%2F7og%3D%3D;" + 
-					"_l_g_=Ug%3D%3D;" + 
-					"_nk_=%5Cu7F57%5Cu4E16%5Cu662D1917;" + 
-					"_samesite_flag_=TRUE;" + 
-					"_tb_token_=f33de6837d37e;" + 
-					"atpsida=366ab72c8fae715764dd4cdd_1629114720_2;" + 
-					"atpsidas=c9b8bbb40dcd460dbe7bf052_1629114702_1;" + 
-					"aui=390575254;" + 
-					"cancelledSubSites=empty;" + 
-					"cna=tOTyEwSd2AECAXF2u/62EilU;" + 
-					"cna=tOTyEwSd2AECAXF2u/62EilU;" + 
-					"cna=tOTyEwSd2AECAXF2u/62EilU;" + 
-					"cnaui=390575254;" + 
-					"cnaui=390575254;" + 
-					"cookie1=W8nd1fnMBD4uRacUMbCSu%2BvA6rhfJrDUq0FOxDlH3YA%3D;" + 
-					"cookie17=UNk3DRz9%2BLcm;" + 
-					"cookie2=19a05c85935ee38270744a99cd8aafba;" + 
-					"csg=0d1a3f4d;" + 
-					"dnk=%5Cu7F57%5Cu4E16%5Cu662D1917;" + 
-					"existShop=MTYyOTExNDcxOQ%3D%3D;" + 
-					"isg=BL6-xZBRU3MVTIYIPjfKKXkUD9QA_4J5u2yIXmjHKoH8C17l0I_SieTph9fHKHqR;" + 
-					"l=eBakzK9HjYUjX-ISBOfanurza77OSIRYYuPzaNbMiOCPO35B5UJPW6HasE86C3GVh6D6R3J4RKMJBeYBqQAonxv9w8VMULkmn;" + 
-					"lgc=%5Cu7F57%5Cu4E16%5Cu662D1917;" + 
-					"mt=ci=89_1;" + 
-					"sca=b41e96a3;" + 
-					"sg=74b;" + 
-					"sgcookie=E100G4ynAVLA3xFsAsCpMgXf6nhQ2Vn4ZHZKXxBMCiWv54ZNHyRBWx%2B0BDjOq79uT5Bd42Dm2msOWabOMz8scLt%2B3OGgHaU%2FJ6BtEz4%2BKRyQj1c%3D;" + 
-					"skt=16dce4f9eabc6e26;" + 
-					"t=93cc5b4cd83e54338a7d80349f34b4bd;" + 
-					"tbsa=6d517a5c2575584e1b62fb02_1629114720_2;" + 
-					"tfstk=c00PB_sqrULzvMzBXzaePkhOJccRwRlotZP_qmF1p32s-7fAXvHAEdOQ1Tsd.;" + 
-					"thw=cn;" + 
-					"tracknick=%5Cu7F57%5Cu4E16%5Cu662D1917;" + 
-					"ubn=p;" + 
-					"uc1=cookie16=UtASsssmPlP%2Ff1IHDsDaPRu%2BPw%3D%3D&existShop=false&cookie15=W5iHLLyFOGW7aA%3D%3D&cookie21=WqG3DMC9Edo1SB5NB6Qtng%3D%3D&cookie14=Uoe2xMLYETsfBw%3D%3D&pas=0;" + 
-					"uc3=vt3=F8dCujL0kxKRi%2FMP%2F2w%3D&lg2=VT5L2FSpMGV7TQ%3D%3D&nk2=oeDiV1Ry1KsgwA%3D%3D&id2=UNk3DRz9%2BLcm;" + 
-					"uc4=id4=0%40Ug49tzaXyHx3tbGOaUvekydIvCk%3D&nk4=0%40o6hbTkkexr7h4Hf0h%2FnTikUEtE7C;" + 
-					"ucn=center;" + 
-					"unb=390575254;" + 
-					"xlly_s=2;" + 
-					"");
+					"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36");
+			connection.setRequestProperty("Cookie", "cookie2=1772d44461105d34559ca430eb3a55d9; t=23378de00289acc495460242593650d4; _tb_token_=e0e3fe66534bd; _samesite_flag_=true; xlly_s=2; _m_h5_tk=0d06d24d73e4a527a862f9e7f0826613_1629145853758; _m_h5_tk_enc=7de6410b0a0f2887d8c5f57c0b65637c; thw=cn; cna=lJGhGVBI1QgCAXjlAX3msmew; sgcookie=E100VjipqFRWM2SM8GNR%2FUcGaXrt9CNnukrrh%2BKVnEe6eXB05Hyy55J%2BHIoZ5nINEbL%2FpkB6njiqGOqTGz0s5DDG0cRutoqT1eq63IftU6IkXVk%3D; unb=390575254; uc3=id2=UNk3DRz9%2BLcm&vt3=F8dCujL0kbzPctBSaHQ%3D&nk2=oeDiV1Ry1KsgwA%3D%3D&lg2=VFC%2FuZ9ayeYq2g%3D%3D; csg=69a8f9cb; lgc=%5Cu7F57%5Cu4E16%5Cu662D1917; cancelledSubSites=empty; cookie17=UNk3DRz9%2BLcm; dnk=%5Cu7F57%5Cu4E16%5Cu662D1917; skt=8102301eb4232f16; existShop=MTYyOTEzNjE2OA%3D%3D; uc4=nk4=0%40o6hbTkkexr7h4Hf0h%2FnTikfDUJlX&id4=0%40Ug49tzaXyHx3tbGOaUvekcCeHGs%3D; tracknick=%5Cu7F57%5Cu4E16%5Cu662D1917; _cc_=Vq8l%2BKCLiw%3D%3D; _l_g_=Ug%3D%3D; sg=74b; _nk_=%5Cu7F57%5Cu4E16%5Cu662D1917; cookie1=W8nd1fnMBD4uRacUMbCSu%2BvA6rhfJrDUq0FOxDlH3YA%3D; mt=ci=89_1; uc1=existShop=false&cookie21=U%2BGCWk%2F7owY3j65jYmjW9Q%3D%3D&cookie15=V32FPkk%2Fw0dUvg%3D%3D&pas=0&cookie14=Uoe2xMLaTu0o%2FQ%3D%3D&cookie16=U%2BGCWk%2F74Mx5tgzv3dWpnhjPaQ%3D%3D; enc=H9%2F4e3ZPsTRruOvdhpWepUikDONwNDkTrDI%2BiSbS1CgiNg0GFq4KtXnd0ixFkfF6VSN2qjd875OT1POnI87QtA%3D%3D; _uab_collina=162913686637000062919453; hng=CN%7Czh-CN%7CCNY%7C156; v=0; x5sec=7b227365617263686170703b32223a223535623337336463646538623130386262333936386661306532643337363731434b7a66366f6747454a7a536e70574c3974653045786f4c4d7a6b774e5463314d6a55304f7a456f676f41434d4b6546677037382f2f2f2f2f77453d227d; JSESSIONID=4CF59E97A6BB639EFED55F3F2457DC97; isg=BFBQDbzABcmyANiSXBFcQ3saIZ6iGTRj-VI2ZEohMKt-hfEv8ir-87_zXU1lVew7; tfstk=cPqOBwvz06fg2akLUPQhGJ4Y3yXlaafxOdGDDO0L_5xAV9xvcs39qacuu4WZFbf..; l=eBakzK9HjYUjXdMfBOfZlurza77TRIRfguPzaNbMiOCPOLfH5BGGW6HNYoLMCnGVHsNWR3J4RKM8BbTw-yCqJxpsw3k_J_Vn3dC..");
 			// 建立连接
 			connection.connect();
 			// 请求成功
@@ -96,6 +56,9 @@ public class GetProBaseInfoService {
 				baos.close();
 				is.close();
 				if(jsonString.contains("g_page_config")) {
+//					jsonString = jsonString.split("window.viewConfig =")[1].split("window.viewData")[0];
+					jsonString = jsonString.split("g_page_config = ")[1].split("g_srp_loadCss")[0].replace("};", "}");
+					logger.info("jsonString:" + jsonString);
 					// 转换成json数据处理
 					JSONObject object = JSONObject.parseObject(jsonString);
 					JSONObject mods = (JSONObject) object.get("mods");
