@@ -4,6 +4,6 @@ import com.dyf.grab.action.service.GetProBaseInfoService;
 
 public class GetProBaseInfo {
 	public static void main(String[] args) {
-		GetProBaseInfoService.getSearchDataOk();//返回json：销量，价格，图片，url等
+		GetProBaseInfoService.getTop100PagesBySaleDesc();//返回json：销量，价格，图片，url等
 	}
 }
